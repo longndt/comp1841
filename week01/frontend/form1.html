@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Add new student</title>
+</head>
+
+<body>
+   <form action="">
+      <fieldset>
+         <legend><b>Add new student</b></legend>
+         <label for="">Student Name</label>
+         <input type="text" name="name" minlength="5" maxlength="20">
+         <br><br>
+         <label for="">Student ID</label>
+         <input type="text" name="id" minlength="8" maxlength="8">
+         <br><br>
+         <label for="">Student Email</label>
+         <input type="email" name="id" required>
+         <br><br>
+         <label for="">Student Gender</label>
+         <br>
+         <input type="radio" name="gender" value="Male"> Male
+         <input type="radio" name="gender" value="Female"> Female
+         <br><br>
+         <label for="">Student Birthday</label>
+         <input type="date" name="birthday" required>
+         <br><br>
+         <label for="">Student Birthplace</label>
+         <select name="" id="">
+            <option value="Ha Noi">Ha Noi</option>
+            <option value="Quang Ninh">Quang Ninh</option>
+            <option value="Hai Phong">Hai Phong</option>
+            <option value="Hai Duong">Hai Duong</option>
+            <option value="Ha Nam">Ha Nam</option>
+         </select>
+         <br><br>
+         <label for="">Student Strength</label>
+         <br>
+         <input type="checkbox" name="strength" id=""> Confidence
+         <br>
+         <input type="checkbox" name="strength" id=""> Presentation
+         <br>
+         <input type="checkbox" name="strength" id=""> Hard-working
+         <br>
+         <input type="checkbox" name="strength" id=""> Friendly
+         <br>
+         <input type="checkbox" name="strength" id=""> Coding skill
+         <br><br>
+         <label for="">Student year</label>
+         <input type="number" name="year" min="1" max="3">
+         <br><br>
+         <label for="">Student overview</label>
+         <br>
+         <textarea rows="10" cols="20" required></textarea>
+         <br><br>
+         <input type="submit" value="Add">
+      </fieldset>
+   </form>
+</body>
+
+</html>
