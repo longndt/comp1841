@@ -23,7 +23,8 @@ $jokes = $pdo->query($sql);
    <tr>
       <th colspan=5>Joke List</th>
       <th>
-         <form action="add_joke.php" method="get">
+         <a href="add_joke.php">Add joke</a>
+         <form action="add_joke.php">
             <input type="submit" value="Add joke">
          </form>
       </th>
@@ -34,6 +35,7 @@ $jokes = $pdo->query($sql);
       <th>Joke Description</th>
       <th>Joke Date</th>
       <th>Joke Image</th>
+      <th>Joke Video</th>
       <th>Menu</th>
    </tr>
    <?php
@@ -57,6 +59,9 @@ $jokes = $pdo->query($sql);
             <img src="images/<?= $joke[4] ?>" width="100" height="100" />
          </td>
          <td>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $joke['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </td>
+         <td>
             <form action="edit_joke.php" method="get">
                <input type="hidden" name="id" value="<?= $joke['id'] ?>">
                <input type="submit" value="Edit">
@@ -72,6 +77,11 @@ $jokes = $pdo->query($sql);
    endforeach;
    ?>
 </table>
+
+<br> <br>
+<?php
+$jokes = $pdo->query($sql);
+?>
 
 <!-- 1st way: foreach loop with bracket, get data by column name -->
 <table border="1">
@@ -109,8 +119,3 @@ $jokes = $pdo->query($sql);
    }
    ?>
 </table>
-
-<br> <br>
-<?php
-$jokes = $pdo->query($sql);
-?>
