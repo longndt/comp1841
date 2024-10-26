@@ -15,8 +15,10 @@
    <nav>
       <ul>
          <li><a href="index.php">Home</a></li>
-         <li><a href="jokes.php">Jokes List</a></li>
+         <li><a href="jokes.php">Joke List</a></li>
+         <li><a href="authors.php">Author List</a></li>
          <li><a href="addjoke.php">Add New Joke</a></li>
+         <li><a href="addauthor.php">Add New Author</a></li>
          <li><a href="about.php">About</a></li>
       </ul>
    </nav>
