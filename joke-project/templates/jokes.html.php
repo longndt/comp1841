@@ -9,6 +9,8 @@ foreach ($jokes as $joke) {
       <a href="mailto:<?= $joke['author_email'] ?>">
          <?= $joke['author_name'] ?></a>
       )
+      -
+      <?= $joke['category_name'] ?>
 
       <a href=" editjoke.php?id=<?= $joke['joke_id'] ?>"
          onclick="return confirm('Do you want to edit this joke?');">Edit</a>
