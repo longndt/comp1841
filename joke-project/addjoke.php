@@ -1,7 +1,7 @@
 <?php
 //set form title
 $title = "Add new joke";
-
+ob_start();
 //connect to db
 include "includes/DatabaseConnection.php";
 

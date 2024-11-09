@@ -1,6 +1,6 @@
 <?php
 $title = "Edit author";
-
+ob_start();
 //connect to db
 require 'includes/DatabaseConnection.php';
 

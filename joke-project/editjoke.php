@@ -1,6 +1,7 @@
 <?php
 //set title
 $title = "Edit joke";
+ob_start();
 //connect to db
 include "includes/DatabaseConnection.php";
 
