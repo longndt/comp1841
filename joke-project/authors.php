@@ -2,6 +2,8 @@
 $title = "Joke List";
 ob_start();
 
+include "CountAllFunction.php";
+
 //connect to DB
 include 'includes/DatabaseConnection.php';
 //create SQL statement
@@ -9,6 +11,8 @@ include 'includes/DatabaseConnection.php';
 $sql = "SELECT * FROM authors ORDER BY author_id DESC";
 //execute (run) SQL and save result to an array
 $authors = $pdo->query($sql);
+
+$total = totalRows($pdo, "authors");
 
 include 'templates/authors.html.php';
 $output = ob_get_clean();

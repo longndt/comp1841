@@ -1,3 +1,7 @@
+<h3>
+   There are <?= $total ?> authors in database
+</h3>
+
 <?php
 foreach ($authors as $author) {
 ?>

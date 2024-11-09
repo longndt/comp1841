@@ -1,3 +1,7 @@
+<h3>
+   There are <?= $total ?> jokes in database
+</h3>
+
 <?php
 foreach ($jokes as $joke) {
 ?>
