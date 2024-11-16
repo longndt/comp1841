@@ -1,12 +1,7 @@
 <?php
-$title = "Joke List";
-ob_start();
+include "includes/functions.php";
 
-//connect to DB
-include 'includes/DatabaseConnection.php';
-
-//include "CountAllFunction"
-include "CountAllFunction.php";
+start();
 
 //create SQL statement
 $sql = "SELECT *, author_name, author_email, category_name FROM jokes
@@ -14,12 +9,12 @@ $sql = "SELECT *, author_name, author_email, category_name FROM jokes
        ON jokes.author_id = authors.author_id
        INNER JOIN categories
        ON jokes.category_id = categories.category_id";
-//execute (run) SQL and save result to an array
-$jokes = $pdo->query($sql);
+
+$jokes = getData($pdo, $sql);
 
 //declare a variable to store total jokes
 $total = totalRows($pdo, "jokes");
 
 include 'templates/jokes.html.php';
-$output = ob_get_clean();
-include 'templates/layout.html.php';
+
+clean();

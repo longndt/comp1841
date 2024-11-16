@@ -2,7 +2,7 @@
 $title = "Joke List";
 ob_start();
 
-include "CountAllFunction.php";
+include "includes/functions.php";
 
 //connect to DB
 include 'includes/DatabaseConnection.php';
